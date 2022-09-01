@@ -1,0 +1,45 @@
+@import 'src/styles/colors';
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+
+  .modal-window {
+    background-color: $darker-white;
+    min-width: 30rem;
+    border-radius: 1rem;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px #d3d3d6;
+      padding: 1rem 2rem;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+
+      .icon {
+        font-size: 1.5rem;
+        color: $darker-gray;
+      }
+
+      .close {
+        color: $darker-gray;
+        font-size: 2rem;
+      }
+    }
+
+
+    &-content {
+      padding: 2rem;
+    }
+  }
+}

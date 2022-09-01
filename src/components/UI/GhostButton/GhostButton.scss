@@ -1,0 +1,19 @@
+@import "src/styles/colors";
+
+.ghost-button {
+  border: none;
+  font-weight: 700;
+  color: $darker-gray;
+
+  &:hover {
+    background-color: darken($white, 20%);
+    color: lighten($darker-white, 20%);
+    box-shadow: 10px 10px 21px darken($light-gray, 10%)
+  }
+
+  &:focus {
+    color: $darker-gray;
+    box-shadow: 10px 10px 21px $light-gray,
+    -10px -10px 21px $white;
+  }
+}

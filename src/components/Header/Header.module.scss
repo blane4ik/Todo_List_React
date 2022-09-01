@@ -1,0 +1,52 @@
+@import "src/styles/colors";
+
+.headerContainer {
+  height: 9rem;
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem 3rem;
+  background-color: $white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius:0;
+
+}
+
+.filterArrow {
+  font-size: 1.2rem;
+  color: $darker-gray;
+  transform: rotateZ(-90deg);
+  transition: transform .5s ease-in-out;
+}
+
+.activeFilter {
+  transform: rotateZ(90deg);
+  transition: transform .5s ease-in-out;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.configBarContainer {
+  position: absolute;
+  top: -140px;
+  left: 0;
+  visibility: hidden;
+  z-index: 0;
+  height: 170px;
+  transition: top .5s ease-in-out;
+}
+
+.containerActive {
+  position: relative;
+  visibility: visible;
+  top: 0;
+  transition: top .5s ease-in-out;
+}

@@ -1,0 +1,14 @@
+{
+  "LOGIN": "Логин",
+  "TODO_LIST_LABEL": "Мой список дел",
+  "ITEMS_ON_PAGE": "Кол-во на странице: ",
+  "FILTER_BY": "Фильтровать по: ",
+  "SORT_BY": "Сортировать по: ",
+  "SEARCH": "Поиск",
+  "ADD_TODO": "Добавить дело",
+  "STATUS_FILTER_ITEM_ALL": "Все",
+  "STATUS_FILTER_ITEM_TODO": "К выполнению",
+  "STATUS_FILTER_ITEM_COMPLETED": "Завершенные",
+  "SORT_BY_ID": "Идентификатор",
+  "SORT_BY_TITLE": "Имени"
+}

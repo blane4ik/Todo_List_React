@@ -1,0 +1,69 @@
+@import "./styles/index";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  background-color: $darker-white;
+}
+
+.main-wrapper {
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 21px $light-gray,
+  -10px -10px 21px $white;
+}
+
+.label {
+  color: darken($light-gray, 25%);
+  font-weight: 700;
+  text-shadow: 4px 3px $darker-white;
+
+  &.crossed {
+    text-shadow: none;
+  }
+}
+
+.form-select, .form-control {
+  &:focus {
+    border: 1px solid $darker-white !important;
+    box-shadow: 10px 10px 21px $light-gray,
+    -10px -10px 21px $white !important;
+  }
+}
+
+.spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background-color: rgba(125, 125, 125, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu.show {
+  min-width: 1rem !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
