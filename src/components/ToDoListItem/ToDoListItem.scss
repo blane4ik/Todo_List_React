@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+
+.todo-list-item {
+  margin: 1rem 0;
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: none;
+  transition: box-shadow .5s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
+    transition: box-shadow .5s ease-in-out;
+  }
+
+  .crossed {
+    color: lighten($light-gray, 5%);
+    --strike: 1; /* "1" means "true" (show the strike line) */
+    background-position-x: left;
+    transition: color 0.5s;
+  }
+
+}
+
+span.label {
+  color: darken($light-gray, 25%);
+  --thickness: .1em;
+  --strike: 0;
+
+  background: linear-gradient(90deg, transparent, currentColor 0) no-repeat
+  right center / calc(var(--strike) * 100%) var(--thickness);
+
+  transition: background-size .5s ease-in-out;
+}
+
+.close {
+  font-size: 1.8rem;
+  color: $error;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($error, 10%);
+  }
+}

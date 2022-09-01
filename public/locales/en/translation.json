@@ -1,0 +1,14 @@
+{
+  "LOGIN": "Login",
+  "TODO_LIST_LABEL": "My TODO list",
+  "ITEMS_ON_PAGE": "Items on page: ",
+  "FILTER_BY": "Filter by: ",
+  "SORT_BY": "Sort by: ",
+  "SEARCH": "Search",
+  "ADD_TODO": "Add new Todo",
+  "STATUS_FILTER_ITEM_ALL": "All",
+  "STATUS_FILTER_ITEM_TODO": "Todo",
+  "STATUS_FILTER_ITEM_COMPLETED": "Completed",
+  "SORT_BY_ID": "Id",
+  "SORT_BY_TITLE": "Title"
+}

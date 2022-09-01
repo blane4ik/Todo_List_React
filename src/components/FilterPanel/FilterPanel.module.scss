@@ -1,0 +1,50 @@
+@import "src/styles/colors";
+
+@mixin shadowConfig() {
+  position: absolute;
+  box-shadow: 0 -2px 5px $darker-gray;
+  height: 0.1px;
+}
+
+.configBar {
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 140px solid $white;
+}
+
+.contentArea {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 90%;
+  width: 90%;
+  padding: 1rem;
+}
+
+.configBarShadowTop {
+  @include shadowConfig();
+  width: 100%;
+}
+
+.configBarShadowLeft {
+  @include shadowConfig();
+  width: 150px;
+  transform: rotateZ(63deg);
+  left: -43px;
+  top: 75px;
+}
+
+.configBarShadowRight {
+  @include shadowConfig();
+  width: 150px;
+  transform: rotateZ(-63deg);
+  right: -43px;
+  top: 75px;
+}
+
+.configBarShadowBottom {
+  @include shadowConfig();
+  width: 90%;
+  bottom: 28px;
+  left: 5%;
+}
