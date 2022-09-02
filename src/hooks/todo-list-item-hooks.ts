@@ -16,8 +16,7 @@ function getTodoItemClasses(isCompleted: boolean) {
     const defaultClasses = ['label', 'col-10', 'px-5'];
     if (isCompleted) {
         defaultClasses.push('crossed');
-        return defaultClasses;
-    } else {
-        return defaultClasses;
     }
+
+    return defaultClasses;
 }

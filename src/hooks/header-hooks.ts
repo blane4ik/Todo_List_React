@@ -29,18 +29,17 @@ function getConfigContainerClasses(filterIsActive) {
     const defaultClasses = ['w-100', classes.configBarContainer];
     if (filterIsActive) {
         defaultClasses.push(classes.containerActive);
-        return defaultClasses;
-    } else {
-        return defaultClasses;
     }
+
+    return defaultClasses;
+
 }
 
 function getArrowClasses(filterIsActive) {
     const defaultClasses = [classes.filterArrow];
     if (filterIsActive) {
         defaultClasses.push(classes.activeFilter);
-        return defaultClasses;
-    } else {
-        return defaultClasses;
     }
+
+    return defaultClasses;
 }
