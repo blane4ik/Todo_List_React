@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { toggleSpinner } from '../store/todo-reducer/todo-reducer';
+import { toggleSpinner } from '../store/reducers/todo-reducer';
 
 
 let store;

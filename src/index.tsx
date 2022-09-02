@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import { injectStore } from './api/api';
 import './i18n';
+import { BrowserRouter } from 'react-router-dom';
 
 injectStore(store);
 
@@ -16,6 +17,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
     <Provider store={store}>
+        <BrowserRouter>
         <App />
+        </BrowserRouter>
     </Provider>
 );

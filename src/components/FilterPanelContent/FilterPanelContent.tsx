@@ -12,7 +12,7 @@ import {
     changeFilterStatus,
     changeSearchString,
     changeSorting
-} from '../../store/todo-reducer/todo-reducer';
+} from '../../store/reducers/todo-reducer';
 import { debounce } from 'lodash';
 import Portal from '../Portal/Portal';
 import Modal from '../Modal/Modal';

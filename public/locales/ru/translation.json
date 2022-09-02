@@ -1,4 +1,10 @@
 {
+  "GREETING_LABEL": "Добро пожаловать в Список Дел",
+  "EMAIL": "Электронная почта",
+  "PASSWORD": "Пароль",
+  "FORGOT_PASSWORD": "Забыли пароль?",
+  "SIGN_UP": "Зарегистрироваться",
+  "ENTER": "Войти",
   "LOGIN": "Логин",
   "TODO_LIST_LABEL": "Мой список дел",
   "ITEMS_ON_PAGE": "Кол-во на странице: ",
@@ -10,5 +16,10 @@
   "STATUS_FILTER_ITEM_TODO": "К выполнению",
   "STATUS_FILTER_ITEM_COMPLETED": "Завершенные",
   "SORT_BY_ID": "Идентификатор",
-  "SORT_BY_TITLE": "Имени"
+  "SORT_BY_TITLE": "Имени",
+  "ERRORS": {
+    "REQUIRED": "Поле обязательно для заполнения",
+    "PATTERN_EMAIL": "Пожалуйста, введите корректную почту",
+    "MIN_LENGTH": "Значение должно быть больше {{amount}} символов"
+  }
 }

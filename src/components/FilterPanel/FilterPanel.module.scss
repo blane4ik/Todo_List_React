@@ -45,6 +45,6 @@
 .configBarShadowBottom {
   @include shadowConfig();
   width: 90%;
-  bottom: 28px;
+  bottom: -10px;
   left: 5%;
 }

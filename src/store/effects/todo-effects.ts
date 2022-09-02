@@ -1,7 +1,7 @@
 import { addTodo, deleteTodo, fetchTodos, toggleChecked } from '../../api/todo-api';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { todoState } from '../selectors/todo-selectors';
-import { toggleCompleted } from '../todo-reducer/todo-reducer';
+import { toggleCompleted } from '../reducers/todo-reducer';
 
 
 export const fetchTodoList = createAsyncThunk(

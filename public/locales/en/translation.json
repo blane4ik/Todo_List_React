@@ -1,4 +1,10 @@
 {
+  "GREETING_LABEL": "Welcome to Todo List App",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "FORGOT_PASSWORD": "Forgot password?",
+  "SIGN_UP": "Sing up",
+  "ENTER": "Enter",
   "LOGIN": "Login",
   "TODO_LIST_LABEL": "My TODO list",
   "ITEMS_ON_PAGE": "Items on page: ",
@@ -10,5 +16,10 @@
   "STATUS_FILTER_ITEM_TODO": "Todo",
   "STATUS_FILTER_ITEM_COMPLETED": "Completed",
   "SORT_BY_ID": "Id",
-  "SORT_BY_TITLE": "Title"
+  "SORT_BY_TITLE": "Title",
+  "ERRORS": {
+    "REQUIRED": "This field is required",
+    "PATTERN_EMAIL": "Please, enter valid e-mail",
+    "MIN_LENGTH": "The value need to be more than {{amount}} symbols"
+  }
 }

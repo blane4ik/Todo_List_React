@@ -54,3 +54,6 @@ export const sortByItems = [
         value: SortBy.TITLE
     }
 ]
+
+export const emailRegEx = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$', 'g');
+export const passwordMinLength = 6;

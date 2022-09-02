@@ -1,6 +1,7 @@
 import { getDefaultMiddleware } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
-import todoReducer from './todo-reducer/todo-reducer';
+import todoReducer from './reducers/todo-reducer';
+import userReducer from './reducers/user-reducer';
 
 const middleware = getDefaultMiddleware({
     immutableCheck: false,
@@ -10,7 +11,8 @@ const middleware = getDefaultMiddleware({
 
 export const store = configureStore({
     reducer: {
-        todoReducer
+        todoReducer,
+        userReducer
     },
     middleware
 })

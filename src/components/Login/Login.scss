@@ -1,0 +1,8 @@
+@import "src/styles/colors";
+
+.login-link {
+  color: $blue;
+  cursor: pointer;
+  text-decoration: underline;
+  user-select: none;
+}

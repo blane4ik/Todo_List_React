@@ -1,5 +1,5 @@
 import React from 'react';
-import ToDoListItem from '../ToDoListItem/ToDoListItem';
+import ToDoListItem from '../../components/ToDoListItem/ToDoListItem';
 import { Todo } from '../../interface/todo';
 import { useGetTodoList } from '../../hooks/todo-list-hooks';
 

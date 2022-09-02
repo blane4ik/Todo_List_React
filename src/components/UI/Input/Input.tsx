@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
+import "./Input.scss";
 
-const Input = ({ ...args }) => {
+const Input = forwardRef((props: any, ref: ForwardedRef<HTMLInputElement>) => {
 
-    const { className, type, ...rest } = args;
+    const { className, type, ...rest } = props;
     const inputType: string = type ? type : 'text';
-    const defaultClasses = 'w-100 h-100 form-control main-wrapper ';
+    const defaultClasses = 'w-100 h-100 form-control main-wrapper custom-input ';
     return (
-        <input {...rest} type={inputType} className={defaultClasses + className}/>
+        <input ref={ref} type={inputType} {...rest} className={defaultClasses + className}/>
     );
-};
+});
 
 export default Input;

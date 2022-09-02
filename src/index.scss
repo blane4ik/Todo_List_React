@@ -63,6 +63,10 @@ html, body {
   min-width: 1rem !important;
 }
 
+.error {
+  color: $error;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
