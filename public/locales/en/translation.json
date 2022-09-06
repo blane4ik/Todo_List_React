@@ -1,6 +1,7 @@
 {
   "GREETING_LABEL": "Welcome to Todo List App",
   "EMAIL": "Email",
+  "USER_GREETING": "Hello, {{user}}!",
   "PASSWORD": "Password",
   "FORGOT_PASSWORD": "Forgot password?",
   "SIGN_UP": "Sing up",

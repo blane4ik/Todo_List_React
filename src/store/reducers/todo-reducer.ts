@@ -29,47 +29,23 @@ const todoReducer = createSlice({
     initialState,
     reducers: {
         toggleCompleted: (state, { payload: id }) => {
-            return {
-                ...state,
-                todos: state.todos.map((element) => element.id === id ? {...element, completed: !element.completed} : element)
-            }
+            state.todos = state.todos.map((element) => element.id === id ? {...element, completed: !element.completed} : element);
         },
         changeFilterStatus: (state, { payload }) => {
-            return {
-                ...state,
-                filter: payload
-            }
+            state.filter = payload;
         },
         changeAmountOnPage: (state, { payload }) => {
-            return {
-                ...state,
-                limit: payload
-            }
+            state.limit = payload;
         },
         changeSearchString: (state, { payload }) => {
-            return {
-                ...state,
-                search: payload
-            }
+            state.search = payload;
         },
         changeSorting: (state, { payload }) => {
-            return {
-                ...state,
-                sortBy: payload
-            }
+            state.sortBy = payload;
         },
         toggleSpinner: (state, { payload }) => {
-            return {
-                ...state,
-                spinnerIsLoading: payload
-            }
+            state.spinnerIsLoading = payload;
         }
-        // removeItem: (state, { payload: id }) => {
-        //     return {
-        //         ...state,
-        //         todos: state.todos.filter(element => element.id !== id)
-        //     }
-        // }
     },
     extraReducers: (builder) => {
         builder.addCase(fetchTodoList.fulfilled, (state, { payload }) => {

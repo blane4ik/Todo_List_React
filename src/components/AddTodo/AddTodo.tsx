@@ -11,11 +11,6 @@ const AddTodo = ({ close }) => {
     const dispatch: Dispatch<any> = useDispatch();
     const [ todoName, setTodoName ] = useState('');
 
-    function updateName(event) {
-        const value = event.target.value;
-        setTodoName(value);
-    }
-
     function addTodo() {
         dispatch(addNewTodo(todoName));
         close();
@@ -24,7 +19,7 @@ const AddTodo = ({ close }) => {
     return (
         <div className="d-flex flex-column">
             <span className="label pb-3">{ t("ADD_TODO") }: </span>
-            <Input value={todoName} onChange={updateName} className="p-3" />
+            <Input value={todoName} onChange={(event) => setTodoName(event.target.value)} className="p-3" />
             <hr className="my-4"/>
             <GhostButton onClick={addTodo} name='Add' className="p-3" />
         </div>

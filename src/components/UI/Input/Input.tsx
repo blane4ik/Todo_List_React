@@ -1,22 +1,14 @@
-import React, { ForwardedRef, forwardRef, useEffect } from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import "./Input.scss";
+import classNames from 'classnames';
 
 const Input = forwardRef((props: any, ref: ForwardedRef<HTMLInputElement>) => {
 
     const { className, type, ...rest } = props;
     const inputType: string = type ? type : 'text';
-    const inputClasses = getClasses();
+    const isInvalid = rest.control?.getFieldState(rest.name).invalid;
+    const inputClasses = classNames('w-100', 'h-100', 'form-control', 'main-wrapper', 'custom-input', { error: isInvalid }, className);
 
-    function getClasses() {
-        const isInvalid = rest.control?.getFieldState(rest.name).invalid;
-        const classes = ['w-100', 'h-100', 'form-control', 'main-wrapper', 'custom-input'];
-        const outerClasses = className?.split(' ');
-        if (isInvalid) {
-            classes.push('error')
-        }
-
-        return classes.concat(outerClasses).join(' ');
-    }
     return (
         <input ref={ref} type={inputType} {...rest} className={inputClasses}/>
     );

@@ -5,7 +5,7 @@ export const ErrorBlockContext = createContext({
     errors: null
 });
 
-const ErrorBlock = ({ children, errors }): any => {
+const ErrorBlock = ({ children, errors }) => {
 
     return (
         <ErrorBlockContext.Provider value={{errors}}>

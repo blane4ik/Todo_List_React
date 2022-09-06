@@ -31,7 +31,6 @@ html, body {
 .label {
   color: darken($light-gray, 25%);
   font-weight: 700;
-  text-shadow: 4px 3px $darker-white;
 
   &.crossed {
     text-shadow: none;
@@ -59,7 +58,7 @@ html, body {
   justify-content: center;
 }
 
-.dropdown-menu.show {
+.dropdown-menu.language.show {
   min-width: 1rem !important;
 }
 

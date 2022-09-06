@@ -1,13 +1,12 @@
 import React from 'react';
 import classes from './FilterPanel.module.scss';
-import { useGetConfigContainerClasses } from '../../hooks/header-hooks';
 import FilterPanelContent from '../FilterPanelContent/FilterPanelContent';
+import classNames from 'classnames';
 
 const FilterPanel = ({ filterIsActive }) => {
-    const configContainerClasses = useGetConfigContainerClasses(filterIsActive);
 
     return (
-        <div className={configContainerClasses.join(' ')}>
+        <div className={classNames({ [classes.containerActive] : filterIsActive }, classes.configBarContainer)}>
             <div className={classes.configBarShadowTop}></div>
             <div className={classes.configBarShadowLeft}></div>
             <div className={classes.configBarShadowRight}></div>

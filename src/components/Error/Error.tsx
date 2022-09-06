@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { ErrorBlockContext } from '../ErrorBlock/ErrorBlock';
+import { FieldValues } from 'react-hook-form';
 
 const Error = ({ type, message }) => {
 
-    const { errors }: any = useContext(ErrorBlockContext);
+    const { errors }: FieldValues = useContext(ErrorBlockContext);
 
     return (
         <div className="d-flex align-items-center">

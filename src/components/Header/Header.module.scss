@@ -33,20 +33,3 @@
   height: 5rem;
   cursor: pointer;
 }
-
-.configBarContainer {
-  position: absolute;
-  top: -140px;
-  left: 0;
-  visibility: hidden;
-  z-index: 0;
-  height: 130px;
-  transition: top .5s ease-in-out;
-}
-
-.containerActive {
-  position: relative;
-  visibility: visible;
-  top: 0;
-  transition: top .5s ease-in-out;
-}
