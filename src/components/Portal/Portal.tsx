@@ -9,8 +9,8 @@ const Portal = ({ children }) => {
 
         return () => {
             document.body.removeChild(el);
-        }
-    }, [el])
+        };
+    }, [el]);
 
     return createPortal(children, el);
 };

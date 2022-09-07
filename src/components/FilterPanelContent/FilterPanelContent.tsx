@@ -22,20 +22,18 @@ const FilterPanelContent = () => {
             <FilterBy/>
             <SearchFilter/>
             <SortBy/>
-            <FilterItem
-                label=""
-                children={
-                    <GhostButton onClick={() => setShowModal(true)} name={ t('ADD_TODO') } />
-                }
-            />
+            <FilterItem label="">
+                <GhostButton onClick={() => setShowModal(true)} name={ t('ADD_TODO') } />
+            </FilterItem>
 
             {
                 showModal && <Portal>
                     <Modal
                         icon={<IoMdAddCircle />}
                         title={ t("ADD_TODO") }
-                        closeHandler={setShowModal}
-                        children={AddTodo} />
+                        closeHandler={setShowModal}>
+                        <AddTodo />
+                    </Modal>
                 </Portal>
             }
         </div>

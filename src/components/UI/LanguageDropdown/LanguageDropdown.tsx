@@ -9,12 +9,14 @@ const LanguageDropdown = () => {
 
     const label = useMemo(() => {
         switch (i18n.language) {
-            case 'en':
-                return <US title="United States" className="mb-1"/>;
-            case 'ru':
-                return <RU title="Russian" className="mb-2"/>;
+        case 'en': 
+            return <US title="United States" className="mb-1"/>;
+        case 'ru':
+            return <RU title="Russian" className="mb-2"/>;
+        default:
+            return null;
         }
-    }, [i18n.language])
+    }, [i18n.language]);
 
     return (
         <Dropdown className="p-3">

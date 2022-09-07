@@ -5,8 +5,8 @@ import { toggleSpinner } from '../store/reducers/todo-reducer';
 let store;
 
 export const injectStore = _store => {
-    store = _store
-}
+    store = _store;
+};
 
 const axiosInstance = axios.create({
     baseURL: `http://localhost:3002/`
@@ -14,7 +14,6 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(function (config) {
     // Do something before request is sent
-
     store.dispatch(toggleSpinner(true));
     return config;
 }, function (error) {

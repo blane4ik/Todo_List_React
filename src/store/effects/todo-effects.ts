@@ -9,11 +9,14 @@ export const fetchTodoList = createAsyncThunk(
     async (args, { getState }) => {
         const state: any = getState();
         const todoStore = todoState(state);
-        const limit = todoStore.limit;
-        const page = todoStore.page;
-        const filter = todoStore.filter;
-        const search = todoStore.search;
-        const sortBy = todoStore.sortBy;
+        const {
+            limit,
+            page,
+            filter,
+            search,
+            sortBy
+        } = todoStore;
+
         return fetchTodos(limit, page, filter, search, sortBy);
     }
 );
@@ -21,9 +24,9 @@ export const fetchTodoList = createAsyncThunk(
 export const deleteTodoItem = createAsyncThunk(
     'TODO_LIST_REMOVE_ITEM',
     async (id: number, { dispatch }) => {
-            return deleteTodo(id).then(() => {
-                    dispatch(fetchTodoList());
-            })
+        return deleteTodo(id).then(() => {
+            dispatch(fetchTodoList());
+        });
     }
 );
 
@@ -32,7 +35,7 @@ export const toggleTodoItemChecked = createAsyncThunk(
     async (id: number, { dispatch }) => {
         return toggleChecked(id).then(() => {
             dispatch(toggleCompleted(id));
-        })
+        });
     }
 );
 

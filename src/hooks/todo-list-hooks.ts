@@ -13,11 +13,11 @@ export const useGetTodoList = () => {
         filter,
         search,
         sortBy
-    } = useSelector(todoState)
+    } = useSelector(todoState);
 
     useEffect(() => {
         dispatch(fetchTodoList());
     }, [dispatch, limit, filter, search, sortBy]);
 
-     return todos;
-}
+    return todos;
+};

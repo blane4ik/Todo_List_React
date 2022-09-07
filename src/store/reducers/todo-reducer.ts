@@ -22,7 +22,7 @@ const initialState: TodoInitialState = {
     search: '',
     sortBy: SortBy.ID,
     spinnerIsLoading: false
-}
+};
 
 const todoReducer = createSlice({
     name: 'todoReducer',

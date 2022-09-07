@@ -9,11 +9,9 @@ const SearchFilter = () => {
     const searchHandler = useFilterSearch();
 
     return (
-        <FilterItem
-            label={ t('SEARCH') + ': ' }
-            children={
-                <Input onChange={searchHandler} placeholder={ t('SEARCH')  + '...' }/>
-            } />
+        <FilterItem label={ t('SEARCH') + ': ' }>
+            <Input onChange={searchHandler} placeholder={ t('SEARCH')  + '...' }/>
+        </FilterItem>
     );
 };
 

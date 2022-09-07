@@ -6,7 +6,7 @@ import { addNewTodo } from '../../store/effects/todo-effects';
 import { Dispatch } from '@reduxjs/toolkit';
 import { useTranslation } from 'react-i18next';
 
-const AddTodo = ({ close }) => {
+const AddTodo = ({ close }: any) => {
     const { t } = useTranslation();
     const dispatch: Dispatch<any> = useDispatch();
     const [ todoName, setTodoName ] = useState('');

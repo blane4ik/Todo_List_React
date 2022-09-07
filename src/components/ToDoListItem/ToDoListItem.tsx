@@ -1,3 +1,4 @@
+import React from 'react';
 import './ToDoListItem.scss';
 import RoundCheckbox from '../UI/RoundCheckbox/RoundCheckbox';
 import { AiOutlineCloseCircle } from 'react-icons/ai';

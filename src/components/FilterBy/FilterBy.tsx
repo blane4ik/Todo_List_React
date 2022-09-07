@@ -10,11 +10,9 @@ const FilterBy = () => {
     const [filter, setFilter] = useFilterBy();
     
     return (
-        <FilterItem
-            label={ t('FILTER_BY') }
-            children={
-                <Select onChange={setFilter} defaultValue={filter} options={statusFilterItems}/>
-            } />
+        <FilterItem label={ t('FILTER_BY') }>
+            <Select onChange={setFilter} defaultValue={filter} options={statusFilterItems}/>
+        </FilterItem>
     );
 };
 

@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import Error from '../Error/Error';
+import ErrorItem from '../Error/ErrorItem';
 
 export const ErrorBlockContext = createContext({
     errors: null
@@ -18,6 +18,6 @@ const ErrorBlock = ({ children, errors }) => {
     );
 };
 
-ErrorBlock.Error = Error;
+ErrorBlock.Error = ErrorItem;
 
 export default ErrorBlock;

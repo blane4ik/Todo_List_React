@@ -22,7 +22,7 @@ export const amountItemOnPage = [
         label: '20',
         value: 20
     },
-]
+];
 
 export const statusFilterItems = [
     {
@@ -53,7 +53,7 @@ export const sortByItems = [
         label: 'SORT_BY_TITLE',
         value: SortBy.TITLE
     }
-]
+];
 
 export const emailRegEx = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$', 'g');
 export const passwordMinLength = 6;

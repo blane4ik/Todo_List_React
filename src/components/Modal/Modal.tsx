@@ -14,8 +14,8 @@ const Modal = ({ icon, title = '', closeHandler, children: ModalComponent }) => 
         document.addEventListener('keyup', keyboardHandler);
 
         return () => {
-            document.removeEventListener('keyup', keyboardHandler);
-        }
+            window.removeEventListener('keyup', keyboardHandler);
+        };
     }, [closeHandler, keyboardHandler]);
 
     return (

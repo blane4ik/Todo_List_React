@@ -8,7 +8,7 @@ interface UserInitialState {
 
 const initialState: UserInitialState = {
     user: null
-}
+};
 
 
 const userReducer = createSlice({
@@ -22,9 +22,6 @@ const userReducer = createSlice({
             state.user = payload;
         });
     }
-})
+});
 
-export const {
-
-} = userReducer.actions;
 export default userReducer.reducer;

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ErrorBlockContext } from '../ErrorBlock/ErrorBlock';
 import { FieldValues } from 'react-hook-form';
 
-const Error = ({ type, message }) => {
+const ErrorItem = ({ type, message }) => {
 
     const { errors }: FieldValues = useContext(ErrorBlockContext);
 
@@ -17,4 +17,4 @@ const Error = ({ type, message }) => {
     );
 };
 
-export default Error;
+export default ErrorItem;

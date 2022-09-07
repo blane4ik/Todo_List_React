@@ -1,9 +1,9 @@
-import React from 'react';
+import React  from 'react';
 import { useTranslation } from 'react-i18next';
 import GhostButton from '../UI/GhostButton/GhostButton';
 import './Login.scss';
 import NamedInput from '../UI/NamedInput/NamedInput';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RoutesPath } from '../../enums/routes-path.enum';
 import { useForm } from 'react-hook-form';
 import { emailRegEx, passwordMinLength } from '../../constants/constants';
@@ -14,6 +14,7 @@ import { userLoginEffect } from '../../store/effects/user-effects';
 const Login = () => {
     const { t } = useTranslation();
     const dispatch: any = useDispatch();
+    const navigate = useNavigate();
     const {
         register,
         handleSubmit,
@@ -22,7 +23,7 @@ const Login = () => {
     } = useForm();
 
     function onSubmit(userData) {
-        dispatch(userLoginEffect(userData));
+        dispatch(userLoginEffect({ userData, navigate }));
     }
 
     return (

@@ -11,8 +11,8 @@ const Select = ({ ...args }) => {
     return (
         <select { ...rest } className={defaultClasses}>
             {
-                options && options.map(option => {
-                    return <option key={option.id} value={option.value}>{ t(option.label) }</option>
+                options.length && options.map(option => {
+                    return <option key={option.id} value={option.value}>{ t(option.label) }</option>;
                 })
             }
         </select>

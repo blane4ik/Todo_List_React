@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import Input from '../Input/Input';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 
-const NamedInput = forwardRef(({ label, ...args }: any, ref) => {
+const NamedInput = forwardRef(({ label, ...args }: any, ref: ForwardedRef<HTMLInputElement>) => {
     const { t } = useTranslation();
 
     const { className, ...rest } = args;
@@ -15,5 +15,7 @@ const NamedInput = forwardRef(({ label, ...args }: any, ref) => {
         </div>
     );
 });
+
+NamedInput.displayName = 'NamedInput';
 
 export default NamedInput;

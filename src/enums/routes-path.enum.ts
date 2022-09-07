@@ -1,6 +1,6 @@
 export enum RoutesPath {
-    MAIN = '/',
-    TODO = '/todo',
+    LOGIN = '/login',
+    TODO = '/',
     FORGOT_PASSWORD = '/frogot-password',
     SIGN_UP = '/sign-up'
 }

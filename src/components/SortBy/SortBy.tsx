@@ -10,11 +10,9 @@ const SortBy = () => {
     const [sorting, setSorting] = useSortBy();
 
     return (
-        <FilterItem
-            label={ t('SORT_BY') }
-            children={
-                <Select onChange={setSorting} defaultValue={sorting} options={sortByItems}/>
-            } />
+        <FilterItem label={ t('SORT_BY') }>
+            <Select onChange={setSorting} defaultValue={sorting} options={sortByItems}/>
+        </FilterItem>
     );
 };
 

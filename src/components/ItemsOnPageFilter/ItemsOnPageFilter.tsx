@@ -10,11 +10,9 @@ const ItemsOnPageFilter = () => {
     const [limit, setLimit] = useFilterLimit();
 
     return (
-        <FilterItem
-            label={ t('ITEMS_ON_PAGE') }
-            children={
-                <Select onChange={setLimit} defaultValue={limit} options={amountItemOnPage}/>
-            } />
+        <FilterItem label={ t('ITEMS_ON_PAGE') }>
+            <Select onChange={setLimit} defaultValue={limit} options={amountItemOnPage}/>
+        </FilterItem>
     );
 };
 

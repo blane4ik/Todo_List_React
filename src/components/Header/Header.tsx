@@ -15,7 +15,7 @@ const Header = () => {
     const location = useLocation();
 
     const [filterIsActive, setFilterIsActive] = useState(false);
-    const arrowClasses = classNames(classes.filterArrow, { [classes.activeFilter]: filterIsActive })
+    const arrowClasses = classNames(classes.filterArrow, { [classes.activeFilter]: filterIsActive });
 
     return (
         <div className="d-flex w-100 flex-column position-relative">
