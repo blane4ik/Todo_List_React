@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Dropdown } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../../store/selectors/user-selectors';
 import { useTranslation } from 'react-i18next';
+import { Dispatch } from '@reduxjs/toolkit';
+import { clearUserInfo } from '../../../store/reducers/user-reducer';
+import { useNavigate } from 'react-router-dom';
+import { RoutesPath } from '../../../enums/routes-path.enum';
 
 const UserDropdown = () => {
     const user = useSelector(selectUser);
     const { t } = useTranslation();
+    const dispatch: Dispatch<any> = useDispatch();
+    const navigate = useNavigate();
+
+    const logout = useCallback(() => {
+        dispatch(clearUserInfo());
+        navigate(RoutesPath.LOGIN);
+    }, []);
 
     return (
         <Dropdown className="p-3">
@@ -19,7 +30,7 @@ const UserDropdown = () => {
                     <span className="label">User info</span>
                 </Dropdown.Item>
                 <hr/>
-                <Dropdown.Item>
+                <Dropdown.Item onClick={logout}>
                     <span className="label">Logout</span>
                 </Dropdown.Item>
             </Dropdown.Menu>

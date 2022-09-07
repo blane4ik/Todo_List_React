@@ -15,7 +15,9 @@ const userReducer = createSlice({
     name: 'USER_REDUCER',
     initialState,
     reducers: {
-
+        clearUserInfo: (state) => {
+            state.user = null;
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(userLoginEffect.fulfilled, (state, { payload }) => {
@@ -24,4 +26,7 @@ const userReducer = createSlice({
     }
 });
 
+export const {
+    clearUserInfo
+} = userReducer.actions;
 export default userReducer.reducer;
