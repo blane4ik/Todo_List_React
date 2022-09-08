@@ -34,16 +34,16 @@ const Login = () => {
                     {...register('email', { required: true, pattern: emailRegEx })}
                     label="EMAIL" />
                 <ErrorBlock errors={errors.email}>
-                    <ErrorBlock.Error type="required" message={t('ERRORS.REQUIRED')} />
-                    <ErrorBlock.Error type="pattern" message={t("ERRORS.PATTERN_EMAIL")} />
+                    <ErrorBlock.Error type="required" message="ERRORS.REQUIRED" />
+                    <ErrorBlock.Error type="pattern" message="ERRORS.PATTERN_EMAIL" />
                 </ErrorBlock>
                 <NamedInput
                     control={control}
                     type="password" {...register('password', { required: true, minLength: passwordMinLength })}
                     label="PASSWORD" />
                 <ErrorBlock errors={errors.password}>
-                    <ErrorBlock.Error type="required" message={t('ERRORS.REQUIRED')} />
-                    <ErrorBlock.Error type="minLength" message={t("ERRORS.MIN_LENGTH", { amount: passwordMinLength })} />
+                    <ErrorBlock.Error type="required" message="ERRORS.REQUIRED" />
+                    <ErrorBlock.Error type="minLength" message="ERRORS.MIN_LENGTH" params={{ amount: passwordMinLength }} />
                 </ErrorBlock>
                 <hr/>
                 <GhostButton type="submit" className="p-3 mb-3" name={t('ENTER')} />

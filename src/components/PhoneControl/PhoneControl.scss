@@ -1,0 +1,21 @@
+@import "src/styles/colors";
+
+.remove {
+  background-color: $error;
+  color: $white;
+
+  &:focus {
+    background-color: $error;
+    color: $white;
+  }
+}
+
+.add {
+  background-color: $green;
+  color: $white;
+
+  &:focus {
+    background-color: $green;
+    color: $white;
+  }
+}

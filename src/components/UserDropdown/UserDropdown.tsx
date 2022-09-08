@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
 import { Dropdown } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectUser } from '../../../store/selectors/user-selectors';
+import { selectUser } from '../../store/selectors/user-selectors';
 import { useTranslation } from 'react-i18next';
 import { Dispatch } from '@reduxjs/toolkit';
-import { clearUserInfo } from '../../../store/reducers/user-reducer';
+import { clearUserInfo } from '../../store/reducers/user-reducer';
 import { useNavigate } from 'react-router-dom';
-import { RoutesPath } from '../../../enums/routes-path.enum';
+import { RoutesPath } from '../../enums/routes-path.enum';
 
 const UserDropdown = () => {
     const user = useSelector(selectUser);

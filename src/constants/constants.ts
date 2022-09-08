@@ -24,6 +24,24 @@ export const amountItemOnPage = [
     },
 ];
 
+export const phoneTypes = [
+    {
+        id: 1,
+        label: 'PHONE_TYPE.WORK',
+        value: 'work'
+    },
+    {
+        id: 2,
+        label: 'PHONE_TYPE.HOME',
+        value: 'home'
+    },
+    {
+        id: 3,
+        label: 'PHONE_TYPE.PRIVATE',
+        value: 'private'
+    }
+];
+
 export const statusFilterItems = [
     {
         id: 1,
@@ -55,5 +73,5 @@ export const sortByItems = [
     }
 ];
 
-export const emailRegEx = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$', 'g');
+export const emailRegEx = new RegExp('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$', 'i');
 export const passwordMinLength = 6;

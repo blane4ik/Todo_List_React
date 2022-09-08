@@ -1,6 +1,14 @@
 {
   "GREETING_LABEL": "Welcome to Todo List App",
   "EMAIL": "Email",
+  "AGE": "Age",
+  "NAME": "Name",
+  "SURNAME": "Surname",
+  "ACCEPT_AGREEMENT": "Accept agreement",
+  "PHONES": "Phones",
+  "PHONE_TYPE.WORK": "Work",
+  "PHONE_TYPE.HOME": "Home",
+  "PHONE_TYPE.PRIVATE": "Private",
   "USER_GREETING": "Hello, {{user}}!",
   "PASSWORD": "Password",
   "FORGOT_PASSWORD": "Forgot password?",
@@ -21,6 +29,8 @@
   "ERRORS": {
     "REQUIRED": "This field is required",
     "PATTERN_EMAIL": "Please, enter valid e-mail",
-    "MIN_LENGTH": "The value need to be more than {{amount}} symbols"
+    "MIN_LENGTH": "The value need to be more than {{amount}} symbols",
+    "MIN_AGE_VALUE": "You should be older then {{amount}} to register",
+    "CHECKED_REQUIRED": "Agreement should be checked"
   }
 }

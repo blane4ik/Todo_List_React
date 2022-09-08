@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import classes from './Header.module.scss';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 import FilterPanel from '../FilterPanel/FilterPanel';
-import LanguageDropdown from '../UI/LanguageDropdown/LanguageDropdown';
+import LanguageDropdown from '../LanguageDropdown/LanguageDropdown';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { RoutesPath } from '../../enums/routes-path.enum';
-import UserDropdown from '../UI/UserDropdown/UserDropdown';
+import UserDropdown from '../UserDropdown/UserDropdown';
 import logo from '../../static/images/my_logo.png';
 import classNames from 'classnames';
 

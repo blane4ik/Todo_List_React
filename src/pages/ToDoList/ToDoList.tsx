@@ -12,7 +12,7 @@ const ToDoList = () => {
                 <div className="w-75 d-flex flex-column align-items-center">
                     {
                         todos.length ? todos.map((todo: Todo) => {
-                            return <ToDoListItem key={todo.id} todo={todo}/>
+                            return <ToDoListItem key={todo.id} todo={todo}/>;
                         }) :
                             <h2>There is no any data</h2>
                     }
