@@ -5,6 +5,8 @@ import { PropagateLoader } from 'react-spinners';
 import { useSelector } from 'react-redux';
 import { spinnerIsLoading } from './store/selectors/todo-selectors';
 import AppRoutes from './router/AppRoutes';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
             { loading && <div className="spinner-wrapper">
                 <PropagateLoader color="#2c2c2c" loading={ true } size={ 30 }/>
             </div> }
+
+            <ToastContainer />
         </div>
     );
 }

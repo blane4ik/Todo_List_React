@@ -32,7 +32,7 @@ const FilterPanelContent = () => {
                         icon={<IoMdAddCircle />}
                         title={ t("ADD_TODO") }
                         closeHandler={setShowModal}>
-                        <AddTodo />
+                        <AddTodo close={() => setShowModal(false)} />
                     </Modal>
                 </Portal>
             }

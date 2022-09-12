@@ -7,6 +7,7 @@ import RadioButton from '../UI/RadioButton/RadioButton';
 
 const GenderControl = ({ control, name, ...rest }) => {
     const { rules } = rest;
+    const { t } = useTranslation();
     const {
         field,
         fieldState: { error }
@@ -17,38 +18,34 @@ const GenderControl = ({ control, name, ...rest }) => {
     });
 
     return (
-        <div className="d-flex col-12">
-            <div className="d-flex flex-column col-4">
-                <RadioButton
-                    control={control}
-                    {...field}
-                    label="MALE"
-                    value='male'
-                    checked={field.value === 'male'}
-                />
-                <ErrorBlock errors={error}>
-                    {
-                        error && (
-                            <ErrorItem type={error.type}  message={error.message} params={rules[error.type].params}/>
-                        )
-                    }
-                </ErrorBlock>
+        <div className="d-flex flex-column col-12">
+            <h5 className="label mb-3">{ t('GENDER') }</h5>
+            <div className="d-flex">
+                <div className="d-flex flex-column col-4">
+                    <RadioButton
+                        control={control}
+                        {...field}
+                        label="MALE"
+                        value='male'
+                        checked={field.value === 'male'}
+                    />
+                </div>
+                <div className="d-flex flex-column col-4">
+                    <RadioButton
+                        control={control}
+                        label="FEMALE"
+                        {...field}
+                        value='female'
+                        checked={field.value === 'female'}/>
+                </div>
             </div>
-            <div className="d-flex flex-column col-4">
-                <RadioButton
-                    control={control}
-                    label="FEMALE"
-                    {...field}
-                    value='female'
-                    checked={field.value === 'female'}/>
-                <ErrorBlock errors={error}>
-                    {
-                        error && (
-                            <ErrorItem type={error.type}  message={error.message} params={rules[error.type].params}/>
-                        )
-                    }
-                </ErrorBlock>
-            </div>
+            <ErrorBlock errors={error}>
+                {
+                    error && (
+                        <ErrorItem type={error.type}  message={error.message} params={rules[error.type].params}/>
+                    )
+                }
+            </ErrorBlock>
         </div>
     );
 };

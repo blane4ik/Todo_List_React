@@ -4,13 +4,17 @@
   "AGE": "Возраст",
   "NAME": "Имя",
   "SURNAME": "Фамилия",
+  "GENDER": "Пол",
   "ACCEPT_AGREEMENT": "Принять соглашение",
   "PHONES": "Номера телефонов",
   "PHONE_TYPE.WORK": "Рабочий",
   "PHONE_TYPE.HOME": "Домашний",
   "PHONE_TYPE.PRIVATE": "Личный",
   "USER_GREETING": "Здравствуйте, {{user}}!",
+  "USER_INFO": "О пользователе",
+  "LOGOUT": "Выйти",
   "PASSWORD": "Пароль",
+  "CONFIRM_PASSWORD": "Подтвердить пароль",
   "FORGOT_PASSWORD": "Забыли пароль?",
   "SIGN_UP": "Зарегистрироваться",
   "ENTER": "Войти",
@@ -31,6 +35,7 @@
     "PATTERN_EMAIL": "Пожалуйста, введите корректную почту",
     "MIN_LENGTH": "Значение должно быть больше {{amount}} символов",
     "MIN_AGE_VALUE": "Вы должны быть старше {{amount}} лет для регистрации",
-    "CHECKED_REQUIRED": "Соглашение должно быть принято"
+    "CHECKED_REQUIRED": "Соглашение должно быть принято",
+    "CONFIRM_PASSWORD": "Пароли должны быть одинаковые"
   }
 }

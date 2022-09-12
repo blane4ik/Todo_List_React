@@ -24,7 +24,8 @@ const CheckboxControl = ({ control, name, ...rest }) => {
             <div className="d-flex flex-column">
                 <RoundCheckbox
                     control={control}
-                    {...field}/>
+                    {...field}
+                    checked={field.value}/>
                 <ErrorBlock errors={error}>
                     {
                         error && (

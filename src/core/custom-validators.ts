@@ -10,7 +10,6 @@ export const requiredValidator = (needToBeChecked = false): ValidationRule<boole
 );
 
 export const emailValidator = (email) => {
-    console.log(email);
     return emailRegEx.test(email) || 'ERRORS.PATTERN_EMAIL';
 };
 

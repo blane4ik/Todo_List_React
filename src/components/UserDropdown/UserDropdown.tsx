@@ -22,16 +22,16 @@ const UserDropdown = () => {
     return (
         <Dropdown className="p-3">
             <Dropdown.Toggle disabled={!user}  variant="ghost" className="main-wrapper px-4 d-flex align-items-center">
-                { t("USER_GREETING", { user: user?.firstName ?? 'guest' }) }
+                { t("USER_GREETING", { user: user?.name ?? 'guest' }) }
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
                 <Dropdown.Item>
-                    <span className="label">User info</span>
+                    <span className="label">{ t('USER_INFO') }</span>
                 </Dropdown.Item>
                 <hr/>
                 <Dropdown.Item onClick={logout}>
-                    <span className="label">Logout</span>
+                    <span className="label">{ t('LOGOUT') }</span>
                 </Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>

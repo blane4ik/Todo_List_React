@@ -5,3 +5,9 @@ export const loginUser = (userInfo) => {
         return response.data;
     });
 };
+
+export const signUp = (userData) => {
+    return api.post('/add-user', userData).then(response => {
+        return response.data;
+    });
+};

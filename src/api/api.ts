@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { toggleSpinner } from '../store/reducers/todo-reducer';
-
+import { toast } from 'react-toastify';
+import { loginUser } from './user-api';
 
 let store;
 
@@ -28,7 +29,9 @@ axiosInstance.interceptors.response.use(function (response) {
     store.dispatch(toggleSpinner(false));
     return response;
 }, function (error) {
+    console.log(error);
     store.dispatch(toggleSpinner(false));
+    toast(error.response.data.length ? error.response.data : 'Unexpected error', { type: 'error' });
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     return Promise.reject(error);

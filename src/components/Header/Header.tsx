@@ -35,7 +35,7 @@ const Header = () => {
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
                     <LanguageDropdown />
-                    <UserDropdown/>
+                    <UserDropdown />
                 </div>
             </div>
             <FilterPanel filterIsActive={filterIsActive} />

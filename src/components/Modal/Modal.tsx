@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import './Modal.scss';
 import { AiFillCloseCircle } from 'react-icons/ai';
 
-const Modal = ({ icon, title = '', closeHandler, children: ModalComponent }) => {
+const Modal = ({ icon, title = '', closeHandler, children }) => {
 
     const keyboardHandler = useCallback((event: KeyboardEvent) => {
         if (event.key === 'Escape') {
@@ -29,7 +29,9 @@ const Modal = ({ icon, title = '', closeHandler, children: ModalComponent }) => 
                     <AiFillCloseCircle onClick={() => closeHandler(false)} className="close" />
                 </div>
                 <div className="modal-window-content">
-                    <ModalComponent close={() => closeHandler(false)} />
+                    {
+                        children
+                    }
                 </div>
             </div>
         </div>

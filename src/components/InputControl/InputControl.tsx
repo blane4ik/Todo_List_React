@@ -5,7 +5,7 @@ import ErrorBlock from '../ErrorBlock/ErrorBlock';
 import ErrorItem from '../Error/ErrorItem';
 
 const InputControl = ({ label, control, name, ...rest }) => {
-    const { rules } = rest;
+    const { rules, type } = rest;
     const {
         field,
         fieldState: { error }
@@ -20,7 +20,8 @@ const InputControl = ({ label, control, name, ...rest }) => {
             <NamedInput
                 control={control}
                 label={label}
-                {...field}/>
+                {...field}
+                type={type}/>
             <ErrorBlock errors={error}>
                 {
                     error && (

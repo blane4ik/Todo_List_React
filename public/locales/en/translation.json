@@ -4,13 +4,17 @@
   "AGE": "Age",
   "NAME": "Name",
   "SURNAME": "Surname",
+  "GENDER": "Gender",
   "ACCEPT_AGREEMENT": "Accept agreement",
   "PHONES": "Phones",
   "PHONE_TYPE.WORK": "Work",
   "PHONE_TYPE.HOME": "Home",
   "PHONE_TYPE.PRIVATE": "Private",
   "USER_GREETING": "Hello, {{user}}!",
+  "USER_INFO": "User Info",
+  "LOGOUT": "Logout",
   "PASSWORD": "Password",
+  "CONFIRM_PASSWORD": "Confirm password",
   "FORGOT_PASSWORD": "Forgot password?",
   "SIGN_UP": "Sing up",
   "ENTER": "Enter",
@@ -31,6 +35,7 @@
     "PATTERN_EMAIL": "Please, enter valid e-mail",
     "MIN_LENGTH": "The value need to be more than {{amount}} symbols",
     "MIN_AGE_VALUE": "You should be older then {{amount}} to register",
-    "CHECKED_REQUIRED": "Agreement should be checked"
+    "CHECKED_REQUIRED": "Agreement should be checked",
+    "CONFIRM_PASSWORD": "Password should be the same"
   }
 }

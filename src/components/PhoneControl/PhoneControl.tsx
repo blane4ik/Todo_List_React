@@ -39,9 +39,9 @@ const PhoneControl = ({ control, name, ...rest }) => {
                                         control={control}
                                         name={`${name}.${index}.type`}
                                         render={({
-                                            field: { onChange, onBlur, value }
+                                            field: { onChange, value }
                                         }) => (
-                                            <Select onChange={onChange} onBlur={onBlur} defaultValue={value} options={phoneTypes}/>
+                                            <Select onChange={onChange} defaultValue={value} options={phoneTypes}/>
                                         )}/>
                                 </div>
                                 <div className="col-5">

@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { loginUser } from '../../api/user-api';
+import { loginUser, signUp } from '../../api/user-api';
 import { RoutesPath } from '../../enums/routes-path.enum';
 
 export const userLoginEffect = createAsyncThunk(
@@ -7,6 +7,16 @@ export const userLoginEffect = createAsyncThunk(
     ({ userData, navigate }: any) => {
         return loginUser(userData).then(user => {
             navigate(RoutesPath.TODO);
+            return user;
+        });
+    }
+);
+
+export const signUpUserEffect = createAsyncThunk(
+    'USER_EFFECT_SIGN_UP',
+    ({ userData, navigate }: any) => {
+        return signUp(userData).then(user => {
+            navigate(RoutesPath.LOGIN);
             return user;
         });
     }
