@@ -30,6 +30,7 @@
   "STATUS_FILTER_ITEM_COMPLETED": "Завершенные",
   "SORT_BY_ID": "Идентификатор",
   "SORT_BY_TITLE": "Имени",
+  "NO_DATA": "Данные не найдены",
   "ERRORS": {
     "REQUIRED": "Поле обязательно для заполнения",
     "PATTERN_EMAIL": "Пожалуйста, введите корректную почту",

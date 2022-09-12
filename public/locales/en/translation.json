@@ -30,6 +30,7 @@
   "STATUS_FILTER_ITEM_COMPLETED": "Completed",
   "SORT_BY_ID": "Id",
   "SORT_BY_TITLE": "Title",
+  "NO_DATA": "There is no any data",
   "ERRORS": {
     "REQUIRED": "This field is required",
     "PATTERN_EMAIL": "Please, enter valid e-mail",
