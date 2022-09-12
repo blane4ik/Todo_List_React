@@ -60,10 +60,10 @@ const PhoneControl = ({ control, name, ...rest }) => {
                                     />
                                 </div>
                                 <div className="col-3 d-flex align-items-center">
-                                    <GhostButton className="add mx-2" name="+" onClick={addGroup}/>
+                                    <GhostButton className="add mx-2" type="button" name="+" onClick={addGroup}/>
                                     {
                                         fields.length > 1 && (
-                                            <GhostButton className="remove" name="-" onClick={() => remove(index)}/>
+                                            <GhostButton className="remove" type="button" name="-" onClick={() => remove(index)}/>
                                         )
                                     }
                                 </div>

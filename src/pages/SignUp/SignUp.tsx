@@ -84,7 +84,7 @@ const SignUp = () => {
             }}/>
 
             <div className="d-flex col-6 p-0">
-                <GhostButton name="Back" onClick={() => navigate('/')} className="p-3 col-3"/>
+                <GhostButton name="Back" type="button" onClick={() => navigate('/')} className="p-3 col-3"/>
                 <GhostButton name="Submit" type="submit" className="p-3 mx-3 col-3"/>
             </div>
         </form>
